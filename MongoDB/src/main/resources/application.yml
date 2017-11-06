@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+#单一数据源  
+spring:
+  application:
+    name: MongoDB
+  data:
+    mongodb:
+      uri: mongodb://10.17.1.223:10040/logs
+logging:
+  level:
+    root: debug
+
+#多数据源       
+mongodb:
+  primary:
+    uri: mongodb://10.17.1.223:10040,10.17.1.225:10042,10.17.1.228:10043/Geo_Places
+  secondary:
+    host: 10.17.1.223
+    port: 10040
+    database: friendsComments
+  threeary:
+    uri: mongodb://10.17.1.223:10040,10.17.1.225:10042,10.17.1.228:10043/productCategory
